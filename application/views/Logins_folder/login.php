@@ -22,7 +22,7 @@
                                 <div class="text-center">
                                 <img src="<?php echo base_url()?>assets/img/eshat_1.jpg"
                                     style="width: 150px; height:200px; border-radius:50%;" alt="logo">
-                                <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                                <h4 class="mt-1 mb-5 pb-1">Admin Login</h4>
                                 </div>
 
                                 <form action="<?php echo base_url(); ?>" method="POST">
@@ -30,12 +30,12 @@
 
                                 <div class="form-outline mb-4">
                                     <input type="email" id="form2Example11" class="form-control"
-                                    placeholder="Phone number or email address" />
-                                    <label class="form-label" for="form2Example11">Username</label>
+                                    placeholder="Enter admin email or phone number" />
+                                    <label class="form-label" for="form2Example11">Email or phone number</label>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="password" id="form2Example22" class="form-control" />
+                                    <input type="password" id="form2Example22" class="form-control" placeholder="Enter admin password"/>
                                     <label class="form-label" for="form2Example22">Password</label>
                                 </div>
 
