@@ -25,18 +25,20 @@
                                 <h4 class="mt-1 mb-5 pb-1">Admin Login</h4>
                                 </div>
 
-                                <form action="<?php echo base_url(); ?>" method="POST">
+                                <form action="<?php echo base_url('Logins_controller/validate'); ?>" method="post">
                                 <p>Please login to your account</p>
 
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="form2Example11" class="form-control"
-                                    placeholder="Enter admin email or phone number" />
-                                    <label class="form-label" for="form2Example11">Email or phone number</label>
+                                    <input type="text" name="user_name" id="form2Example11" class="form-control"
+                                    placeholder="Enter admin user name" />
+                                    <label class="form-label" for="form2Example11">User name </label>
+                                    <?php echo form_error('user_name'); ?>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="password" id="form2Example22" class="form-control" placeholder="Enter admin password"/>
+                                    <input type="password" name="password" id="form2Example22" class="form-control" placeholder="Enter admin password"/>
                                     <label class="form-label" for="form2Example22">Password</label>
+                                    <?php echo form_error('password'); ?>
                                 </div>
 
                                 <div class="text-center pt-1 mb-5 pb-1">
