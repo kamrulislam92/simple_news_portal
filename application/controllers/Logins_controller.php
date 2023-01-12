@@ -48,4 +48,9 @@ public function get_data(){
 		$this->form_validation->set_rules('user_name','user_name','trim|required');
 		$this->form_validation->set_rules('password','password','trim|required');
 		}
+
+		public function Logout(){
+			$this->session->sess_destroy();
+			redirect('Logins_controller');
+		}
 }
