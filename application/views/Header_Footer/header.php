@@ -37,6 +37,12 @@
       </li>
     </ul>
 
+
+
+
+   
+
+
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
@@ -249,3 +255,52 @@
     </div>
     <!-- /.sidebar -->
   </aside>
+<!-- Content Header (Page header) -->
+
+
+
+    <!-- /.content-header -->
+
+    <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h6 class="m-0"><?php if(isset($title) && !empty($title)){echo $title;} ?></h6>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a><?php if(isset($head_line) && !empty($head_line)){echo $head_line;} ?></a></li>
+              
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+
+        <?php 
+          $success = $this->session->flashdata('success');
+          if(!empty($success)){
+            echo "<div class='alert alert-success'>$success </div>";
+          }
+        ?>
+        <?php 
+          $warning = $this->session->flashdata('warning');
+          if(!empty($warning)){
+            echo "<div class='alert alert-warning'>$warning </div>";
+          }
+        ?>
+        <?php 
+          $update = $this->session->flashdata('update');
+          if(!empty($update)){
+            echo "<div class='alert alert-success'>$update </div>";
+          }
+        ?>
+        <?php 
+          $delete = $this->session->flashdata('delete');
+          if(!empty($delete)){
+            echo "<div class='alert alert-danger'>$delete</div>";
+          }
+        ?>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->

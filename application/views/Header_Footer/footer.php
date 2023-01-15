@@ -38,7 +38,21 @@
     $(document).on('click', '.add_category',function(){
       $('#add_category').modal('show');
     });
+
+
+    $(document).on('click','.edit_category',function(){
+      var id =$(this).attr("id");
+      $.post("<?php echo base_url('Categories_controller/edit'); ?>",{id: id},
+      function(data){
+        $('#edit_category_name').val(data.category_name);
+        $('#id').val(data.id);
+
+      },"json");
+      $('#edit_category').modal('show');
+    });
+
   });
+
 </script>
 
 </body>
